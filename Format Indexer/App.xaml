@@ -1,0 +1,29 @@
+﻿<Application x:Class="Format_Indexer.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Format_Indexer"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <Style TargetType="TextBlock">
+                <Setter Property="Foreground" Value="White"></Setter>
+            </Style>
+            <Style TargetType="Button">
+                <Setter Property="Background" Value="#0189bf"/>
+                <Setter Property="FontSize" Value="16"></Setter>
+                <Setter Property="Foreground" Value="White"></Setter>
+                <Setter Property="FontWeight" Value="Bold"></Setter>
+            </Style>
+            <Style TargetType="ListView">
+                <Setter Property="Background" Value="#121212"></Setter>
+                <Setter Property="Foreground" Value="#121212"></Setter>
+            </Style>
+            <Style TargetType="GridSplitter">
+                <Setter Property="Background" Value="#121212"></Setter>
+            </Style>
+            <Style x:Name="WindowStyle" TargetType="Window">
+                <Setter Property="Background" Value="#121212"></Setter>
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

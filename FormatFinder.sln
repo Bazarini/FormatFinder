@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30711.63
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormatFinderCore", "FormatFinder\FormatFinderCore.csproj", "{CC9B0D93-76D8-441A-A1F7-850261C96693}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Format Indexer", "Format Indexer\Format Indexer.csproj", "{80FA2695-8827-465B-8988-D634D5FCAFAF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CC9B0D93-76D8-441A-A1F7-850261C96693}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC9B0D93-76D8-441A-A1F7-850261C96693}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC9B0D93-76D8-441A-A1F7-850261C96693}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC9B0D93-76D8-441A-A1F7-850261C96693}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80FA2695-8827-465B-8988-D634D5FCAFAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80FA2695-8827-465B-8988-D634D5FCAFAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80FA2695-8827-465B-8988-D634D5FCAFAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80FA2695-8827-465B-8988-D634D5FCAFAF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FA810512-9B6B-4189-A6D9-78F17BEDCEDD}
+	EndGlobalSection
+EndGlobal
