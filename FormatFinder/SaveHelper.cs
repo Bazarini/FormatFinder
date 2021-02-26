@@ -16,7 +16,7 @@ namespace FormatFinderCore
             switch (saveOption)
             {
                 case SaveOption.XML:
-                    SaveXML(path, value, objType);
+                    SaveXML(path, value);
                     break;
                 case SaveOption.CSV:
                     SaveCSV(path, value, objType);
@@ -31,14 +31,22 @@ namespace FormatFinderCore
                     break;
             }
         }
-        private static void SaveXML(string path, object value, Type objType)
+        private static void SaveXML(string path, object value)
         {
-            XmlSerializer serializer = new XmlSerializer(objType);
+            XmlSerializer serializer;
+            serializer = new XmlSerializer(typeof(PagesWithFormatCollection));
+
             var fileName = path + ".xml";
             using (FileStream stream = new FileStream(fileName, FileMode.OpenOrCreate))
             {
                 serializer.Serialize(stream, value);
             }
+#if DEBUG
+            using (FileStream stream = new FileStream(fileName, FileMode.Open))
+            {
+                var check = (PagesWithFormatCollection)serializer.Deserialize(stream);
+            }
+#endif
         }
         private static void SaveJSON(string path, object value)
         {
@@ -49,6 +57,18 @@ namespace FormatFinderCore
                 using (StreamWriter writer = new StreamWriter(stream))
                     serializer.Serialize(writer, value);
             }
+#if DEBUG
+            using (FileStream stream = new FileStream(fileName, FileMode.Open))
+            {
+                using (StreamReader reader = new StreamReader(stream))
+                {
+                    using (JsonTextReader tr = new JsonTextReader(reader))
+                    {
+                        var check = (PagesWithFormatCollection)serializer.Deserialize(tr);
+                    }
+                }
+            }
+#endif
         }
         private static void SaveCSV(string path, object value, Type objType)
         {
@@ -62,7 +82,7 @@ namespace FormatFinderCore
 
                         foreach (var item in enumerable)
                         {
-                            var text = string.Join(";", item.GetType().GetProperties().Select(s => (string)s.GetValue(s)));
+                            var text = string.Join(";", item.GetType().GetProperties().Select(s => s.GetValue(item)));
                             writer.WriteLine(text);
                         }
                     else

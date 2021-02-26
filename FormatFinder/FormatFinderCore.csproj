@@ -49,7 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FormatCollection.cs" />
+    <Compile Include="PagesWithFormat.cs" />
     <Compile Include="FormatExtractor.cs" />
     <Compile Include="FormatInfo.cs" />
     <Compile Include="PaperFormat.cs" />
@@ -60,6 +60,9 @@
     <Compile Include="SaveOption.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\.editorconfig">
+      <Link>.editorconfig</Link>
+    </None>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>

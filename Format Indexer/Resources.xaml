@@ -1,5 +1,11 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:local="clr-namespace:Format_Indexer">
-    
+    <BitmapImage x:Key="AddBlackImage"  UriSource ="/Resources/Add.png"/>
+    <BitmapImage x:Key="AddWhiteImage"  UriSource="/Resources/Add_White.png"/>
+    <BitmapImage x:Key="Logo" UriSource="/Resources/DD_Logo.png" />
+    <BitmapImage x:Key="DefaultSize" UriSource="/Resources/Default_Size.png" />
+    <BitmapImage x:Key="ZoomOut" UriSource="/Resources/zoom-out.png" />
+    <BitmapImage x:Key="ZoomIn" UriSource="/Resources/zoom_in.png" />
+    <BitmapImage x:Key="FolderWhite" UriSource="/Resources/folder_White.png" />
 </ResourceDictionary>

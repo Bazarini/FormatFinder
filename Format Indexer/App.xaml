@@ -5,6 +5,13 @@
              StartupUri="MainWindow.xaml">
     <Application.Resources>
         <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary  Source="Resources.xaml" x:Name="images"></ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+            <Brush x:Key="Common">#0189bf</Brush>
+            <Brush x:Key="Secondary">#0189bf</Brush>
+            <Brush x:Key="Commentary">#0189bf</Brush>
+            <Brush x:Key="Accent">#ffaf26</Brush>
             <Style TargetType="TextBlock">
                 <Setter Property="Foreground" Value="White"></Setter>
             </Style>
@@ -23,6 +30,9 @@
             </Style>
             <Style x:Name="WindowStyle" TargetType="Window">
                 <Setter Property="Background" Value="#121212"></Setter>
+            </Style>
+            <Style TargetType="MenuItem">
+                <Setter Property="Background" Value="#0189bf"></Setter>
             </Style>
         </ResourceDictionary>
     </Application.Resources>

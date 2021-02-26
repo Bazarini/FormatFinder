@@ -31,11 +31,11 @@ namespace FormatFinderCore
             foreach (var format in _paperFormats.OrderByDescending(s => s.MaxVal))
             {
                 if (format.IsInRange(input))
-                    return new FormatInfo(format.Name, true);
+                    return new FormatInfo() { Name = format.Name, IsStandard = true };
                 if (format.IsInParticularRange(input))
-                    return new FormatInfo( format.Name, false);
+                    return new FormatInfo() { Name = format.Name, IsStandard = false };
             }
-            return new FormatInfo(PaperFormatName.Unknown, false);
+            return new FormatInfo() { Name = PaperFormatName.Unknown, IsStandard = false };
         }
         public static FormatInfo GetFormatName(int width, int height)
         {

@@ -56,10 +56,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="RelayCommand.cs" />
     <Compile Include="SaveOptionSelector.xaml.cs">
       <DependentUpon>SaveOptionSelector.xaml</DependentUpon>
     </Compile>
     <Compile Include="SaveOptionSelectorVM.cs" />
+    <Page Include="Controls\Buttons.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -72,6 +77,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Resources.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="SaveOptionSelector.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -111,21 +120,13 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\19360626041548336247-512.png" />
     <Resource Include="Resources\Add.png" />
-    <Resource Include="Resources\DragAndDrop.jpg" />
     <Resource Include="Resources\files.png" />
     <Resource Include="Resources\folder.png" />
     <Resource Include="Resources\Reload.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\DD_Logo.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\DragAndDrop.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\Solid256stripeDiagonal1_4_gray.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\Add_White.png" />
@@ -137,7 +138,25 @@
     <Resource Include="Resources\Reload_White.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\Image_Empty.png" />
+    <Resource Include="Resources\IconEmpty.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\zoom-out.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\zoom_in.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Default_Size.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\FitToWindow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\FitToHeight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\FitToWidth.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
